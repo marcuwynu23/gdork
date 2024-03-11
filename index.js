@@ -28,7 +28,7 @@ async function googleSearch(query) {
 
 async function main() {
   const argv = yargs
-    .usage("Usage: $0 [options]")
+    .usage("Usage: gdork [options]")
     .option("q", {
       alias: "query",
       describe: "Specify the search query",
@@ -41,32 +41,32 @@ async function main() {
     }).argv;
 
   const advancedQueries = {
-    "inurl:": `Value is contained somewhere in the url. \n\tEx: $0 -q "preventing ransomware inurl:fbi"`,
+    "inurl:": `Value is contained somewhere in the url. \n\tEx: gdork -q "preventing ransomware inurl:fbi"`,
     "site:":
-      'Only search within this website’s given domain. \n\tEx: $0 -q "windows xp end of life site:microsoft.com"',
+      'Only search within this website’s given domain. \n\tEx: gdork -q "windows xp end of life site:microsoft.com"',
     "filetype:":
-      'Search only for files, not webpages. \n\tEx: $0 -q "nasa moon landing filetype:JPG"',
+      'Search only for files, not webpages. \n\tEx: gdork -q "nasa moon landing filetype:JPG"',
     "allinurl:": "Search all of the following words in the url.",
     "intext:":
-      'Search the body of the webpage for specific text. \n\tEx: $0 -q "patient record intext:"index of /htdocs""',
+      'Search the body of the webpage for specific text. \n\tEx: gdork -q "patient record intext:"index of /htdocs""',
     "related:":
-      "Find website results that are related to your search term. \n\tEx: $0 -q related:sans.org",
+      "Find website results that are related to your search term. \n\tEx: gdork -q related:sans.org",
     "info:":
-      "Find supplemental information Google may have on this page (useful for finding cached pages). \n\tEx: $0 -i",
+      "Find supplemental information Google may have on this page (useful for finding cached pages). \n\tEx: gdork -i",
     "link:":
-      "Find other pages indexed by Google that reference this link. \n\tEx: $0 -q link:http://www.somecompany.com/supersecretfile.doc",
+      "Find other pages indexed by Google that reference this link. \n\tEx: gdork -q link:http://www.somecompany.com/supersecretfile.doc",
     '"quote"':
-      'Find an exact phrase (though results may include related words). \n\tEx: $0 -q "Malware Hunting"',
+      'Find an exact phrase (though results may include related words). \n\tEx: gdork -q "Malware Hunting"',
     "+word":
-      'Show results with this word exactly. Do not include similar words. \n\tEx: $0 -q "Malware +Hunter"',
+      'Show results with this word exactly. Do not include similar words. \n\tEx: gdork -q "Malware +Hunter"',
     "word/query":
-      'Do not include this word in search results or queries. \n\tEx: $0 -q "Advanced Malware Hunting beginner introduction site:microsoft.com"',
+      'Do not include this word in search results or queries. \n\tEx: gdork -q "Advanced Malware Hunting beginner introduction site:microsoft.com"',
     '"word * word"':
-      'Wildcard. Search for anything between these two words, but include both. \n\tEx: $0 -q "Next * Firewalls with *"',
+      'Wildcard. Search for anything between these two words, but include both. \n\tEx: gdork -q "Next * Firewalls with *"',
     "OR (or |)":
-      'Return results for either item. The pipe character can be used in place. \n\tEx: $0 -q "locky OR ransomware"',
+      'Return results for either item. The pipe character can be used in place. \n\tEx: gdork -q "locky OR ransomware"',
     "AND (or &)":
-      'Return results with both items. Ampersand character can be used in place. \n\tEx: $0 -q "cissp AND certification"',
+      'Return results with both items. Ampersand character can be used in place. \n\tEx: gdork -q "cissp AND certification"',
   };
 
   if (argv.advanced) {
