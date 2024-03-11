@@ -1,0 +1,19 @@
+{
+  "name": "gdork",
+  "version": "1.0.0",
+  "description": "A CLI tool for performing Google dork searches using Puppeteer, a headless browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google",
+    "dork",
+    "CLI"
+  ],
+  "author": "Mark Wayne Menorca",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^22.4.1"
+  }
+}
