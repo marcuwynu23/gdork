@@ -1,6 +1,6 @@
 {
   "name": "gdork",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A CLI tool for performing Google dork searches using Puppeteer, a headless browser.",
   "main": "index.js",
   "scripts": {
