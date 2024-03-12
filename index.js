@@ -81,11 +81,15 @@ async function main() {
     try {
       const results = await googleSearch(argv.query);
       console.log("Search results:");
-      results.forEach((result, index) => {
-        console.log(
-          `  ${index + 1}. ${chalk.green(result.title)} - ${result.url}`
-        );
-      });
+      if (results.length === 0) {
+        console.log("No results found");
+      } else {
+        results.forEach((result, index) => {
+          console.log(
+            `  ${index + 1}. ${chalk.green(result.title)} - ${result.url}`
+          );
+        });
+      }
     } catch (error) {
       console.error("Error:", error);
     }
